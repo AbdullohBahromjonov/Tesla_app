@@ -21,8 +21,10 @@ struct ContentView: View {
                     
                     CarSectionView()
                         
-                    ControlPanelView(title: "Quick Shortcuts", showEdit: true)
-                    ControlPanelView(title: "Recent Actions", showEdit: false)
+                    ControlPanelView(title: "Quick Shortcuts", showEdit: true, actionButtonList: quickShortcuts)
+                    ControlPanelView(title: "Recent Actions", showEdit: false, actionButtonList: recentActions)
+                    
+                    SettingsView()
                 }
             }
             .padding(.horizontal)
@@ -102,7 +104,7 @@ struct HomeHeader: View {
                 )
             }
         }
-        .padding(.top, 50)
+        .padding(.top, 30)
     }
 }
 
@@ -183,6 +185,8 @@ struct ControlPanelTitle: View {
 struct ControlPanelView: View {
     let title: String
     let showEdit: Bool
+    let actionButtonList: [ActionButtonModel]
+    @State var selectedItem = 0
     
     var body: some View {
         VStack {
@@ -190,29 +194,149 @@ struct ControlPanelView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top) {
-                    ActionButton(image: "bolt.fill", action: {}, text: "Charging")
-                    ActionButton(image: "fanblades.fill", action: {}, text: "Fan On")
-                    ActionButton(image: "music.note", action: {}, text: "Media Controls")
-                    ActionButton(image: "bolt.car", action: {}, text: "Close Charge Port")
+                    ForEach(actionButtonList) { item in
+                        ActionButton(
+                            notActiveImage: item.reverseImage,
+                            isActiveImage: item.image,
+                            text: item.text,
+                            action: {
+                                print(item.text)
+                            }
+                        )
+                    }
                 }
             }
         }
+        .padding(.bottom)
     }
 }
 
 struct ActionButton: View {
-    let image: String
-    let action: () -> Void
+    let notActiveImage: String
+    let isActiveImage: String
+    @State var isActive = false
     let text: String
+    let action: () -> Void
     
     var body: some View {
         VStack(alignment: .center) {
-            GeneralButton(image: Image(systemName: image), action: action)
+            GeneralButton(
+                image: Image(systemName: isActive ? isActiveImage : notActiveImage),
+                action: {
+                    isActive.toggle()
+                }
+            )
             Text(text)
-                .frame(width: 72, height: .infinity)
+                .frame(width: 72)
+                .fixedSize()
                 .font(.system(size: 12, weight: .semibold, design: .default))
                 .multilineTextAlignment(.center)
                 .foregroundColor(.white)
         }
+    }
+}
+
+
+struct ActionButtonModel: Identifiable {
+    let id: Int
+    let image: String
+    let reverseImage: String
+    let text: String
+}
+
+let quickShortcuts = [
+    ActionButtonModel(id: 1, image: "bolt", reverseImage: "bolt.fill", text: "Charging"),
+    ActionButtonModel(id: 2, image: "fanblades", reverseImage: "fanblades.fill", text: "Fan On"),
+    ActionButtonModel(id: 3, image: "music.note", reverseImage: "music.note", text: "Media Controls"),
+    ActionButtonModel(id: 4, image: "bolt.car", reverseImage: "bolt.car.fill", text: "Close Charge Port")
+]
+
+let recentActions = [
+    ActionButtonModel(id: 1, image: "arrow.up.square", reverseImage: "arrow.down.app", text: "Open Tunk"),
+    ActionButtonModel(id: 2, image: "fanblades", reverseImage: "fanblades.fill", text: "Fan Off"),
+    ActionButtonModel(id: 3, image: "person.fill.viewfinder", reverseImage: "person.fill.viewfinder", text: "Summon")
+]
+
+struct SettingsView: View {
+    var body: some View {
+        VStack {
+            ControlPanelTitle(title: "All Settings", showEdit: false)
+            LazyVGrid (columns: [GridItem(.adaptive(minimum: 130, maximum: 180)), GridItem(.adaptive(minimum: 130, maximum: 180))]) {
+                SettingBlock(image: "car.fill", text: "Controls", subtitle: "car locked".uppercased(), hasSubtitle: true)
+                SettingBlock(image: "fanblades.fill", text: "Climate", subtitle: "interior 68C".uppercased(), hasSubtitle: true)
+                SettingBlock(image: "location.fill", text: "Location", subtitle: "empire state building".uppercased(), hasSubtitle: true)
+                SettingBlock(image: "checkerboard.shield", text: "Security", subtitle: "0 events detected".uppercased(), hasSubtitle: true)
+                SettingBlock(image: "sparkles", text: "Updates", subtitle: "3 updates available".uppercased(), hasSubtitle: true)
+            }
+            
+            Button (
+                action: {},
+                label: {
+                    Text("Reorder groups")
+                        .font(.system(size: 14, weight: .medium, design: .default))
+                        .padding(.vertical, 8)
+                        .padding(.horizontal, 14)
+                        .foregroundColor(.white)
+                        .background(Color.white.opacity(0.05))
+                        .clipShape(Capsule())
+                        .overlay(
+                            Capsule()
+                                .stroke(Color.white.opacity(0.5), lineWidth: 0.5)
+                        )
+                }
+            )
+            .padding(.top)
+        }
+    }
+}
+
+struct SettingBlock: View {
+    let image: String
+    let text: String
+    let subtitle: String
+    let hasSubtitle: Bool
+    
+    var body: some View {
+        
+        Button(
+            action: {},
+            label: {
+                HStack {
+                    Image(systemName: image)
+                        //.imageScale(.large)
+                        .foregroundColor(.white)
+                    
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(text)
+                            .fontWeight(.semibold)
+                            .font(.system(size: 16,weight: .medium, design: .default))
+                            .foregroundColor(.white)
+                        
+                        if hasSubtitle {
+                            Text(subtitle)
+                                .font(.system(size: 8, weight: .medium, design: .default))
+                                .foregroundColor(.white)
+                        }
+                    }
+                    
+                    Spacer()
+                    
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(.white)
+                }
+                .padding(12)
+                .background(
+                    RoundedRectangle(cornerRadius: 15)
+                        .foregroundColor(Color.white.opacity(0.05))
+                    )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 15)
+                        .stroke(
+                            Color.white.opacity(0.5),
+                            lineWidth: 0.5
+                        )
+                )
+            }
+        )
     }
 }
