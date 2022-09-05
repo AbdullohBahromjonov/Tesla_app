@@ -14,6 +14,15 @@
 		E504812328A6947E002E1E82 /* Tesla_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E504812228A6947E002E1E82 /* Tesla_appTests.swift */; };
 		E504812D28A6947E002E1E82 /* Tesla_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E504812C28A6947E002E1E82 /* Tesla_appUITests.swift */; };
 		E504812F28A6947E002E1E82 /* Tesla_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E504812E28A6947E002E1E82 /* Tesla_appUITestsLaunchTests.swift */; };
+		E5CB6C1928AA93F20040C185 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB6C1828AA93F20040C185 /* HomeHeaderView.swift */; };
+		E5CB6C1B28AA94000040C185 /* DeviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB6C1A28AA94000040C185 /* DeviderView.swift */; };
+		E5CB6C1D28AA942E0040C185 /* ControlPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB6C1C28AA942E0040C185 /* ControlPanelView.swift */; };
+		E5CB6C1F28AA943B0040C185 /* CarSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB6C1E28AA943B0040C185 /* CarSectionView.swift */; };
+		E5CB6C2128AA94DF0040C185 /* GeneralButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB6C2028AA94DF0040C185 /* GeneralButton.swift */; };
+		E5CB6C2328AA950E0040C185 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB6C2228AA950E0040C185 /* ActionButton.swift */; };
+		E5CB6C2528AA95570040C185 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB6C2428AA95570040C185 /* SettingsView.swift */; };
+		E5CB6C2728AA95A20040C185 /* VoiceCommandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB6C2628AA95A20040C185 /* VoiceCommandButton.swift */; };
+		E5DE6A7728BFD0BF0097D801 /* CarControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DE6A7628BFD0BF0097D801 /* CarControlsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,15 @@
 		E504812828A6947E002E1E82 /* Tesla_appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tesla_appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E504812C28A6947E002E1E82 /* Tesla_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tesla_appUITests.swift; sourceTree = "<group>"; };
 		E504812E28A6947E002E1E82 /* Tesla_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tesla_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E5CB6C1828AA93F20040C185 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		E5CB6C1A28AA94000040C185 /* DeviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviderView.swift; sourceTree = "<group>"; };
+		E5CB6C1C28AA942E0040C185 /* ControlPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelView.swift; sourceTree = "<group>"; };
+		E5CB6C1E28AA943B0040C185 /* CarSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarSectionView.swift; sourceTree = "<group>"; };
+		E5CB6C2028AA94DF0040C185 /* GeneralButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralButton.swift; sourceTree = "<group>"; };
+		E5CB6C2228AA950E0040C185 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		E5CB6C2428AA95570040C185 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E5CB6C2628AA95A20040C185 /* VoiceCommandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCommandButton.swift; sourceTree = "<group>"; };
+		E5DE6A7628BFD0BF0097D801 /* CarControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarControlsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +112,8 @@
 		E504811028A6947D002E1E82 /* Tesla_app */ = {
 			isa = PBXGroup;
 			children = (
+				E5CB6C2828AA99AB0040C185 /* View */,
 				E504811128A6947D002E1E82 /* Tesla_appApp.swift */,
-				E504811328A6947D002E1E82 /* ContentView.swift */,
 				E504811528A6947D002E1E82 /* Assets.xcassets */,
 				E504811728A6947D002E1E82 /* Preview Content */,
 			);
@@ -125,6 +143,31 @@
 				E504812E28A6947E002E1E82 /* Tesla_appUITestsLaunchTests.swift */,
 			);
 			path = Tesla_appUITests;
+			sourceTree = "<group>";
+		};
+		E5CB6C2828AA99AB0040C185 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5CB6C2928AA99BA0040C185 /* HomeScreen */,
+				E5CB6C1A28AA94000040C185 /* DeviderView.swift */,
+				E5CB6C2028AA94DF0040C185 /* GeneralButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E5CB6C2928AA99BA0040C185 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E5CB6C1828AA93F20040C185 /* HomeHeaderView.swift */,
+				E5CB6C1C28AA942E0040C185 /* ControlPanelView.swift */,
+				E5CB6C2228AA950E0040C185 /* ActionButton.swift */,
+				E5CB6C1E28AA943B0040C185 /* CarSectionView.swift */,
+				E504811328A6947D002E1E82 /* ContentView.swift */,
+				E5DE6A7628BFD0BF0097D801 /* CarControlsView.swift */,
+				E5CB6C2628AA95A20040C185 /* VoiceCommandButton.swift */,
+				E5CB6C2428AA95570040C185 /* SettingsView.swift */,
+			);
+			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +300,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5CB6C2728AA95A20040C185 /* VoiceCommandButton.swift in Sources */,
+				E5CB6C1928AA93F20040C185 /* HomeHeaderView.swift in Sources */,
+				E5CB6C1F28AA943B0040C185 /* CarSectionView.swift in Sources */,
 				E504811428A6947D002E1E82 /* ContentView.swift in Sources */,
+				E5CB6C2528AA95570040C185 /* SettingsView.swift in Sources */,
+				E5CB6C1B28AA94000040C185 /* DeviderView.swift in Sources */,
+				E5CB6C1D28AA942E0040C185 /* ControlPanelView.swift in Sources */,
 				E504811228A6947D002E1E82 /* Tesla_appApp.swift in Sources */,
+				E5CB6C2128AA94DF0040C185 /* GeneralButton.swift in Sources */,
+				E5DE6A7728BFD0BF0097D801 /* CarControlsView.swift in Sources */,
+				E5CB6C2328AA950E0040C185 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
