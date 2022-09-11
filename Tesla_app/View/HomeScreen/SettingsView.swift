@@ -16,8 +16,9 @@ struct SettingsView: View {
                 NavigationLink(destination: CarControlsView()) {
                     SettingBlock(image: "car.fill", text: "Controls", subtitle: "car locked".uppercased(), hasSubtitle: true)
                 }
-                SettingBlock(image: "car.fill", text: "Controls", subtitle: "car locked".uppercased(), hasSubtitle: true)
-                SettingBlock(image: "fanblades.fill", text: "Climate", subtitle: "interior 68C".uppercased(), hasSubtitle: true)
+                NavigationLink(destination: ClimateView()) {
+                    SettingBlock(image: "fanblades.fill", text: "Climate", subtitle: "interior 68C".uppercased(), hasSubtitle: true)
+                }
                 SettingBlock(image: "location.fill", text: "Location", subtitle: "empire state building".uppercased(), hasSubtitle: true)
                 SettingBlock(image: "checkerboard.shield", text: "Security", subtitle: "0 events detected".uppercased(), hasSubtitle: true)
                 SettingBlock(image: "sparkles", text: "Updates", subtitle: "3 updates available".uppercased(), hasSubtitle: true)

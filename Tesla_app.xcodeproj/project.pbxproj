@@ -23,6 +23,7 @@
 		E5CB6C2528AA95570040C185 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB6C2428AA95570040C185 /* SettingsView.swift */; };
 		E5CB6C2728AA95A20040C185 /* VoiceCommandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB6C2628AA95A20040C185 /* VoiceCommandButton.swift */; };
 		E5DE6A7728BFD0BF0097D801 /* CarControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DE6A7628BFD0BF0097D801 /* CarControlsView.swift */; };
+		E5E556AF28CCF56400057B57 /* ClimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E556AE28CCF56400057B57 /* ClimateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		E5CB6C2428AA95570040C185 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E5CB6C2628AA95A20040C185 /* VoiceCommandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCommandButton.swift; sourceTree = "<group>"; };
 		E5DE6A7628BFD0BF0097D801 /* CarControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarControlsView.swift; sourceTree = "<group>"; };
+		E5E556AE28CCF56400057B57 /* ClimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				E5CB6C2228AA950E0040C185 /* ActionButton.swift */,
 				E5CB6C1E28AA943B0040C185 /* CarSectionView.swift */,
 				E504811328A6947D002E1E82 /* ContentView.swift */,
+				E5E556AE28CCF56400057B57 /* ClimateView.swift */,
 				E5DE6A7628BFD0BF0097D801 /* CarControlsView.swift */,
 				E5CB6C2628AA95A20040C185 /* VoiceCommandButton.swift */,
 				E5CB6C2428AA95570040C185 /* SettingsView.swift */,
@@ -302,6 +305,7 @@
 			files = (
 				E5CB6C2728AA95A20040C185 /* VoiceCommandButton.swift in Sources */,
 				E5CB6C1928AA93F20040C185 /* HomeHeaderView.swift in Sources */,
+				E5E556AF28CCF56400057B57 /* ClimateView.swift in Sources */,
 				E5CB6C1F28AA943B0040C185 /* CarSectionView.swift in Sources */,
 				E504811428A6947D002E1E82 /* ContentView.swift in Sources */,
 				E5CB6C2528AA95570040C185 /* SettingsView.swift in Sources */,

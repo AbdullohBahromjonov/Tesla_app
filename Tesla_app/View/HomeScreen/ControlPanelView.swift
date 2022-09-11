@@ -36,6 +36,15 @@ struct ControlPanelView: View {
     }
 }
 
+struct ControlPanelView_Preiviews: PreviewProvider {
+    static var previews: some View {
+        ControlPanelView(title: "Quick Shortcuts", showEdit: false, actionButtonList: quickShortcuts)
+            .padding()
+            .background(Color.black.opacity(0.92))
+            .previewLayout(.sizeThatFits)
+    }
+}
+
 struct ControlPanelTitle: View {
     let title: String
     let showEdit: Bool

@@ -10,6 +10,8 @@ import SwiftUI
 struct GeneralButton: View {
     let image: Image
     let action: () -> Void
+    var color = Color.white.opacity(0.05)
+    
     
     var body: some View {
         Button(
@@ -19,7 +21,7 @@ struct GeneralButton: View {
                     .imageScale(.large)
                     .frame(width: 44, height: 44)
                     .foregroundColor(.white)
-                    .background(Color.white.opacity(0.05))
+                    .background(color)
                     .clipShape(Circle())
                     .overlay {
                         Circle()

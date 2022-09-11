@@ -54,14 +54,14 @@ struct ActionButtonModel: Identifiable {
 }
 
 let quickShortcuts = [
-    ActionButtonModel(id: 1, image: "bolt", reverseImage: "bolt.fill", text: "Charging"),
-    ActionButtonModel(id: 2, image: "fanblades", reverseImage: "fanblades.fill", text: "Fan On"),
+    ActionButtonModel(id: 1, image: "bolt", reverseImage: "bolt.fill", text: "Charge"),
+    ActionButtonModel(id: 2, image: "fanblades", reverseImage: "fanblades.fill", text: "Fan"),
     ActionButtonModel(id: 3, image: "music.note", reverseImage: "music.note", text: "Media Controls"),
-    ActionButtonModel(id: 4, image: "bolt.car", reverseImage: "bolt.car.fill", text: "Close Charge Port")
+    ActionButtonModel(id: 4, image: "bolt.car", reverseImage: "bolt.car.fill", text: "Charge Port")
 ]
 
 let recentActions = [
-    ActionButtonModel(id: 1, image: "arrow.up.square", reverseImage: "arrow.down.app", text: "Open Tunk"),
-    ActionButtonModel(id: 2, image: "fanblades", reverseImage: "fanblades.fill", text: "Fan Off"),
+    ActionButtonModel(id: 1, image: "arrow.up.square", reverseImage: "arrow.down.app", text: "Tunk"),
+    ActionButtonModel(id: 2, image: "fanblades", reverseImage: "fanblades.fill", text: "Fan"),
     ActionButtonModel(id: 3, image: "person.fill.viewfinder", reverseImage: "person.fill.viewfinder", text: "Summon")
 ]
